@@ -1,3 +1,7 @@
 class FarmersMarket < ApplicationRecord
   has_many :produces, dependent: :destroy
-end 
+
+  validates_presence_of :name
+  validates_presence_of :local
+  validates_presence_of :vendor_count
+end
