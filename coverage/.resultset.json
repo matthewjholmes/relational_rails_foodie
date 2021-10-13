@@ -248,6 +248,8 @@
           null,
           1,
           1,
+          null,
+          1,
           null
         ]
       },
@@ -257,7 +259,7 @@
           null
         ]
       },
-      "/Users/devinpile/turing/2mod/relational_rails_foodie/app/models/farmers_market.rb": {
+      "/Users/devinpile/turing/2mod/relational_rails_foodie/app/models/restaurant.rb": {
         "lines": [
           1,
           1,
@@ -275,17 +277,23 @@
           null
         ]
       },
-      "/Users/devinpile/turing/2mod/relational_rails_foodie/app/controllers/farmers_markets_controller.rb": {
+      "/Users/devinpile/turing/2mod/relational_rails_foodie/app/models/dish.rb": {
         "lines": [
           1,
-          null,
           1,
-          0,
-          null,
           null,
           1,
           1,
-          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/devinpile/turing/2mod/relational_rails_foodie/app/controllers/dishes_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -297,6 +305,6 @@
         ]
       }
     },
-    "timestamp": 1634166315
+    "timestamp": 1634169279
   }
 }

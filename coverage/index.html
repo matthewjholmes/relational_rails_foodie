@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-10-13T17:05:15-06:00">2021-10-13T17:05:15-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-10-13T17:54:39-06:00">2021-10-13T17:54:39-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  98.31%
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="green">
+         1.02
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>19</b> files in total.
+    <b>20</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>59</b> relevant lines,
-    <span class="green"><b>58</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed. </span>
+    <b>64</b> relevant lines,
+    <span class="green"><b>64</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
-  98.31%
+  100.0%
 </span>
 )
   </div>
@@ -82,13 +82,13 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#e5485c59e5663c3cdcd9ab27ba8b0c190f8dbade" class="src_link" title="app/controllers/farmers_markets_controller.rb">app/controllers/farmers_markets_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">80.00 %</td>
-            <td class="cell--number">11</td>
+            <td class="strong t-file__name"><a href="#ebf455c7452525b8fae2add9e3256ee365f8503a" class="src_link" title="app/controllers/dishes_controller.rb">app/controllers/dishes_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">5</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">0.80</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -115,7 +115,18 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#e4f7437b4ee854c3941a3f603f4d21733119772b" class="src_link" title="app/models/farmers_market.rb">app/models/farmers_market.rb</a></td>
+            <td class="strong t-file__name"><a href="#73dd2259c3d25350f5dba90b43ab2f79cc068bb5" class="src_link" title="app/models/dish.rb">app/models/dish.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#6ec5b4fd7eed83328ce3d9fad0048f6ea5f41877" class="src_link" title="app/models/restaurant.rb">app/models/restaurant.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">7</td>
             <td class="cell--number">5</td>
@@ -271,9 +282,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#64376b4dc8c40f0b9078123be7ccd8ff4967bc2f" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">5</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">6</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -349,12 +360,12 @@
 </div>
 
       
-        <div class="source_table" id="e5485c59e5663c3cdcd9ab27ba8b0c190f8dbade">
+        <div class="source_table" id="ebf455c7452525b8fae2add9e3256ee365f8503a">
   <div class="header">
-    <h3>app/controllers/farmers_markets_controller.rb</h3>
+    <h3>app/controllers/dishes_controller.rb</h3>
     <h4>
-      <span class="red">
-  80.0%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -363,9 +374,9 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>3</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -382,23 +393,12 @@
 
             
 
-            <code class="ruby">class FarmersMarketsController &lt; ApplicationController</code>
+            <code class="ruby">class DishesController &lt; ApplicationController</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
+          <li class="covered" data-hits="1" data-linenumber="2">
             <span class="hits">1</span>
             
 
@@ -409,84 +409,29 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="4">
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @dishes = Dish.all</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
             
             
 
             
 
-            <code class="ruby">    @farmers_markets = FarmersMarket.all</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="5">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def show</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    @farmers_market = FarmersMarket.find(params[:id])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
             
             
 
@@ -618,9 +563,9 @@
 </div>
 
       
-        <div class="source_table" id="e4f7437b4ee854c3941a3f603f4d21733119772b">
+        <div class="source_table" id="73dd2259c3d25350f5dba90b43ab2f79cc068bb5">
   <div class="header">
-    <h3>app/models/farmers_market.rb</h3>
+    <h3>app/models/dish.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -632,8 +577,8 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>6</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -651,7 +596,7 @@
 
             
 
-            <code class="ruby">class FarmersMarket &lt; ApplicationRecord</code>
+            <code class="ruby">class Dish &lt; ApplicationRecord</code>
           </li>
         </div>
       
@@ -662,7 +607,7 @@
 
             
 
-            <code class="ruby">  has_many :produces, dependent: :destroy</code>
+            <code class="ruby">  belongs_to :restaurant</code>
           </li>
         </div>
       
@@ -695,7 +640,7 @@
 
             
 
-            <code class="ruby">  validates_presence_of :local</code>
+            <code class="ruby">  validates_presence_of :seasonal</code>
           </li>
         </div>
       
@@ -706,7 +651,126 @@
 
             
 
-            <code class="ruby">  validates_presence_of :vendor_count</code>
+            <code class="ruby">  validates_presence_of :calories</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates_presence_of :restaurant_id</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="6ec5b4fd7eed83328ce3d9fad0048f6ea5f41877">
+  <div class="header">
+    <h3>app/models/restaurant.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>5</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class Restaurant &lt; ApplicationRecord</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  has_many :dishes, dependent: :destroy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates_presence_of :name</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates_presence_of :dine_in</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates_presence_of :rating</code>
           </li>
         </div>
       
@@ -3178,8 +3242,8 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>6</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3280,6 +3344,28 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;dishes&#39;, to: &#39;dishes#index&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
