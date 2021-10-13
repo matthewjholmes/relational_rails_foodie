@@ -4,4 +4,11 @@ describe Produce do
   describe 'relationships' do
     it { should belong_to :farmers_market }
   end
-end 
+
+  describe 'validations' do
+    it { should validate_presence_of :name }
+    it { should validate_presence_of :seasonal }
+    it { should validate_presence_of :quantity }
+    it { should validate_presence_of :farmers_market_id }
+  end
+end
