@@ -16,5 +16,10 @@ RSpec.describe 'restaurant index' do
       expect(page).to have_content(@restaurant2.name)
       expect(page).to have_content(@restaurant3.name)
     end
+
+    it 'i see the restaurants ordered by most recently created' do
+      expect(@restaurant3.name).to appear_before(@restaurant2.name)
+      expect(@restaurant2.name).to appear_before(@restaurant1.name)
+    end
   end
 end
