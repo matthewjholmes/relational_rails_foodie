@@ -12,7 +12,6 @@ RSpec.describe 'Produce Index' do
   end
 
   it 'i see each produce in the system with attributes' do
-    save_and_open_page
     # within "produce-#{@produce1.id}" do
       expect(page).to have_content(@produce1.name)
       expect(page).to have_content(@produce1.seasonal)

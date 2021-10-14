@@ -250,7 +250,9 @@
           1,
           null,
           1,
+          1,
           null,
+          1,
           1,
           null
         ]
@@ -258,6 +260,30 @@
       "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/spec/features/produces/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -298,6 +324,10 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -308,6 +338,6 @@
         ]
       }
     },
-    "timestamp": 1634170175
+    "timestamp": 1634171623
   }
 }
