@@ -20,5 +20,10 @@ RSpec.describe 'farmers market show page' do
     it 'i see the number of produces for the market' do
       expect(page).to have_content("Produce variety: 3")
     end
+
+    it 'i see a link to the markets produce' do
+      click_link 'Produce'
+      expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/produces")
+    end
   end
 end
