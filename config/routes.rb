@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/restaurants', to: 'restaurants#index'
   get '/restaurants/:id', to: 'restaurants#show'
+  get '/restaurants/new', to: 'restaurants#new'
+  post '/restaurants', to: 'restaurants#create'
 
   get '/farmers_markets', to: 'farmers_markets#index'
   get '/farmers_markets/:id', to: 'farmers_markets#show'

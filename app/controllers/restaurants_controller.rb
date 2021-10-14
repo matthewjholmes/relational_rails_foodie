@@ -8,4 +8,10 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
 
+  def new
+    require "pry"; binding.pry
+  end
+
+  def create
+  end
 end
