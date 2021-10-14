@@ -3,3 +3,4 @@
 <h3><%= @restaurant.rating %></h3>
 
 <p>Dishes offered: <%= @restaurant.dishes_count %></p>
+<%= link_to 'Dishes', "/restaurants/#{@restaurant.id}/dishes" %>

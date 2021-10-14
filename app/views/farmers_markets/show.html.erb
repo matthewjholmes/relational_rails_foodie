@@ -3,3 +3,5 @@
 <h3><%= @farmers_market.vendor_count %></h3>
 
 <p>Produce variety: <%= @farmers_market.produce_count %></p>
+
+<%= link_to 'Produce', "/farmers_markets/#{@farmers_market.id}/produces" %>

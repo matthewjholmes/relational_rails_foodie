@@ -20,5 +20,10 @@ RSpec.describe 'restaurant show page' do
     it 'i see a count of the dishes for this restaurant' do
       expect(page).to have_content("Dishes offered: 3")
     end
+
+    it 'i see a link to restaurant dishes' do
+      click_link 'Dishes'
+      expect(current_path).to eq("/restaurants/#{@restaurant1.id}/dishes")
+    end
   end
 end
