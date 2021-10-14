@@ -5,7 +5,7 @@ RSpec.describe 'farmers_market index' do
     before do
       # Edge case: what's up with boolean = false making record not appear on Restaurant.all
       @farmers_market1 = FarmersMarket.create(name: "Veg Garden", local: true , vendor_count: 12)
-      @farmers_market2 = FarmersMarket.create(name: "Megan's Market", local: true , vendor_count: 20)
+      @farmers_market2 = FarmersMarket.create(name: "Megan's Market", local: false , vendor_count: 20)
       @farmers_market3 = FarmersMarket.create(name: "Dao Grain", local: true , vendor_count: 1)
 
       visit '/farmers_markets'

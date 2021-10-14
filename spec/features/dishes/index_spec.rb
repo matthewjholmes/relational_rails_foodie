@@ -5,7 +5,7 @@ RSpec.describe 'Dishes Index' do
     restaurant1 = Restaurant.create(name: "Jameson's", dine_in: true, rating: 5)
 
     @dish1 = Dish.create(name: 'Soup', seasonal: true, calories: 450, restaurant_id: restaurant1.id)
-    @dish2 = Dish.create(name: 'Salad', seasonal: true, calories: 300, restaurant_id: restaurant1.id)
+    @dish2 = Dish.create(name: 'Salad', seasonal: false, calories: 300, restaurant_id: restaurant1.id)
     @dish3 = Dish.create(name: 'Sandwich', seasonal: true, calories: 950, restaurant_id: restaurant1.id)
 
     visit '/dishes'

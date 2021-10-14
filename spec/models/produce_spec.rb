@@ -7,7 +7,6 @@ describe Produce do
 
   describe 'validations' do
     it { should validate_presence_of :name }
-    it { should validate_presence_of :seasonal }
     it { should validate_presence_of :quantity }
     it { should validate_presence_of :farmers_market_id }
   end

@@ -5,7 +5,7 @@ RSpec.describe 'restaurant index' do
     before do
       # Edge case: what's up with boolean = false making record not appear on Restaurant.all
       @restaurant1 = Restaurant.create(name: "Jameson's", dine_in: true, rating: 5)
-      @restaurant2 = Restaurant.create(name: "Rails", dine_in: true, rating: 1)
+      @restaurant2 = Restaurant.create(name: "Rails", dine_in: false, rating: 1)
       @restaurant3 = Restaurant.create(name: "SQooL", dine_in: true, rating: 3)
 
       visit '/restaurants'
