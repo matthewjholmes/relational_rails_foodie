@@ -242,6 +242,7 @@
         "lines": [
           1,
           null,
+          1,
           null,
           1,
           1,
@@ -267,6 +268,37 @@
           null
         ]
       },
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/welcome_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/restaurants_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/restaurant.rb": {
         "lines": [
           1,
@@ -276,7 +308,7 @@
           1,
           null,
           1,
-          2,
+          0,
           null,
           null
         ]
@@ -285,6 +317,49 @@
         "lines": [
           1,
           1,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/farmers_markets_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/farmers_market.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/dishes_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
           null,
           1,
           0,
@@ -303,28 +378,32 @@
           null
         ]
       },
-      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/restaurants_controller.rb": {
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/produces_controller.rb": {
         "lines": [
           1,
+          null,
+          1,
+          1,
+          null,
           null,
           1,
           0,
           null,
-          null,
-          1,
-          2,
-          null,
-          null,
           null
         ]
       },
-      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/application_controller.rb": {
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/produce.rb": {
         "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
           1,
           null
         ]
       }
     },
-    "timestamp": 1634246905
+    "timestamp": 1634248530
   }
 }
