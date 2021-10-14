@@ -12,7 +12,6 @@ RSpec.describe 'Dishes Index' do
   end
 
   it 'i see each dish in the system with attributes' do
-    save_and_open_page
     # within "dish-#{@dish1.id}" do
       expect(page).to have_content(@dish1.name)
       expect(page).to have_content(@dish1.seasonal)

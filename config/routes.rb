@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get '/farmers_markets/:id', to: 'farmers_markets#show'
 
   get 'dishes', to: 'dishes#index'
+
+  get 'produces', to: 'produces#index'
 end
