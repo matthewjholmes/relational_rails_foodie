@@ -12,4 +12,8 @@ Rails.application.routes.draw do
 
   get 'produces', to: 'produces#index'
   get 'produces/:id', to: 'produces#show'
+
+  get 'restaurants/:restaurant_id/dishes', to: 'restaurant_dishes#index'
+
+  get 'farmers_markets/:farmers_market_id/produces', to: 'farmers_market_produces#index'
 end

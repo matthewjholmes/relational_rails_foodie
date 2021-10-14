@@ -1,0 +1,10 @@
+<h1><%= @restaurant.name %> Dishes</h1>
+
+<% @dishes.each do |dish| %>
+  <div id="dish-<%= dish.id %>">
+   <%= dish.name %>
+   <%= dish.seasonal %>
+   <%= dish.calories %>
+   <%= dish.restaurant_id %>
+  </div>
+<% end %>

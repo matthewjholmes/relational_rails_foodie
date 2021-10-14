@@ -10,7 +10,6 @@ RSpec.describe 'dish show page' do
     end
 
     it 'i see the dish with its attributes' do
-      
       expect(page).to have_content(@dish1.name)
       expect(page).to have_content(@dish1.seasonal)
       expect(page).to have_content(@dish1.calories)
