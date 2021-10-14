@@ -4,4 +4,7 @@ class Restaurant < ApplicationRecord
   validates_presence_of :name
   validates_presence_of :rating
 
+  def dishes_count
+    dishes.length
+  end
 end
