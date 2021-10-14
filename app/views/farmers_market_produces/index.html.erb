@@ -1,0 +1,10 @@
+<h1><%= @farmers_market.name %> Produce</h1>
+
+<% @produces.each do |produce| %>
+  <div id="produce-<%= produce.id %>">
+   <%= produce.name %>
+   <%= produce.seasonal %>
+   <%= produce.quantity %>
+   <%= produce.farmers_market_id %>
+  </div>
+<% end %>
