@@ -16,5 +16,10 @@ RSpec.describe 'farmers_market index' do
       expect(page).to have_content(@farmers_market2.name)
       expect(page).to have_content(@farmers_market3.name)
     end
+
+    it 'markets are ordered by most recent creation' do
+      expect(@farmers_market3.name).to appear_before(@farmers_market2.name)
+      expect(@farmers_market2.name).to appear_before(@farmers_market1.name)
+    end
   end
 end

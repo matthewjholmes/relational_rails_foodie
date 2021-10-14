@@ -267,11 +267,18 @@
           null
         ]
       },
-      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/restaurant.rb": {
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/farmers_market.rb": {
         "lines": [
           1,
           1,
           null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/application_record.rb": {
+        "lines": [
           1,
           1,
           null,
@@ -281,14 +288,7 @@
           null
         ]
       },
-      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/restaurants_controller.rb": {
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/farmers_markets_controller.rb": {
         "lines": [
           1,
           null,
@@ -310,6 +310,6 @@
         ]
       }
     },
-    "timestamp": 1634245606
+    "timestamp": 1634245981
   }
 }
