@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_12_003309) do
+ActiveRecord::Schema.define(version: 2021_10_14_205447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "dishes", force: :cascade do |t|
     t.string "name"
-    t.boolean "seasonal"
+    t.boolean "seasonal", default: false
     t.integer "calories"
     t.bigint "restaurant_id"
     t.datetime "created_at", null: false
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_10_12_003309) do
 
   create_table "farmers_markets", force: :cascade do |t|
     t.string "name"
-    t.boolean "local"
+    t.boolean "local", default: true
     t.integer "vendor_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2021_10_12_003309) do
 
   create_table "produces", force: :cascade do |t|
     t.string "name"
-    t.boolean "seasonal"
+    t.boolean "seasonal", default: true
     t.integer "quantity"
     t.bigint "farmers_market_id"
     t.datetime "created_at", null: false
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2021_10_12_003309) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
-    t.boolean "dine_in"
+    t.boolean "dine_in", default: true
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

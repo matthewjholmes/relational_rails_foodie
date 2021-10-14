@@ -4,7 +4,7 @@ RSpec.describe 'Farmers Market Produces Index' do
   before do
     @farmers_market1 = FarmersMarket.create(name: "Veg Garden", local: true , vendor_count: 12)
     @produce1 = Produce.create(name: "Onions", seasonal: true, quantity: 160, farmers_market_id: @farmers_market1.id)
-    @produce2 = Produce.create(name: "Mushrooms", seasonal: true, quantity: 180, farmers_market_id: @farmers_market1.id)
+    @produce2 = Produce.create(name: "Mushrooms", seasonal: false, quantity: 180, farmers_market_id: @farmers_market1.id)
     @produce3 = Produce.create(name: "Peppers", seasonal: true, quantity: 200, farmers_market_id: @farmers_market1.id)
 
     visit "/farmers_markets/#{@farmers_market1.id}/produces"
