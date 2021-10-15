@@ -14,15 +14,19 @@ Rails.application.routes.draw do
   post '/farmers_markets', to: 'farmers_markets#create'
   get '/farmers_markets/:id', to: 'farmers_markets#show'
   get '/farmers_markets/:id/edit', to: 'farmers_markets#edit'
-  patch 'farmers_markets/:id', to: 'farmers_markets#update'
+  patch '/farmers_markets/:id', to: 'farmers_markets#update'
 
-  get 'dishes', to: 'dishes#index'
-  get 'dishes/:id', to: 'dishes#show'
+  get '/dishes', to: 'dishes#index'
+  get '/dishes/:id', to: 'dishes#show'
 
-  get 'produces', to: 'produces#index'
-  get 'produces/:id', to: 'produces#show'
+  get '/produces', to: 'produces#index'
+  get '/produces/:id', to: 'produces#show'
 
-  get 'restaurants/:restaurant_id/dishes', to: 'restaurant_dishes#index'
+  get '/restaurants/:restaurant_id/dishes', to: 'restaurant_dishes#index'
+  get '/restaurants/:restaurant_id/dishes/new', to: 'restaurant_dishes#new'
+  post '/restaurants/:restaurant_id/dishes', to: 'restaurant_dishes#create'
 
-  get 'farmers_markets/:farmers_market_id/produces', to: 'farmers_market_produces#index'
+  get '/farmers_markets/:farmers_market_id/produces', to: 'farmers_market_produces#index'
+  get '/farmers_markets/:farmers_market_id/produces/new', to: 'farmers_market_produces#new'
+  post '/farmers_markets/:farmers_market_id/produces', to: 'farmers_market_produces#create'
 end

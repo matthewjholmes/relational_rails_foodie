@@ -26,4 +26,20 @@ RSpec.describe 'Farmers Market Produces Index' do
     expect(page).to have_content(@produce3.quantity)
     expect(page).to have_content(@produce3.farmers_market_id)
   end
+
+  it 'i see a link to add a new dish' do
+    click_link 'Create New Produce'
+    expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/produces/new")
+  end
+
+  it 'i fill out the form and a new produce is created, and redirect to farmers_market produce index' do
+    click_link 'Create New Produce'
+    fill_in 'Name', with: 'Potatoes'
+    fill_in 'Seasonal (true/false)', with: 'false'
+    fill_in 'Quantity', with: '2000'
+    click_button 'Create New Produce'
+
+    expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/produces")
+    expect(@farmers_market1.produces.count).to eq(4)
+  end
 end
