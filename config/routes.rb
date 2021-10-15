@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/restaurants/:id/edit', to: 'restaurants#edit'
 
   get '/farmers_markets', to: 'farmers_markets#index'
+  get '/farmers_markets/new', to: 'farmers_markets#new'
+  post '/farmers_markets', to: 'farmers_markets#create'
   get '/farmers_markets/:id', to: 'farmers_markets#show'
 
   get 'dishes', to: 'dishes#index'

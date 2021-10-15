@@ -1,0 +1,3 @@
+questions for next checkin:
+
+#how can we use 'validates_presence_of' with our boolean
