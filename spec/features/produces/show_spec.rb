@@ -15,5 +15,7 @@ RSpec.describe 'produce show page' do
       expect(page).to have_content(@produce1.quantity)
       expect(page).to have_content(@produce1.farmers_market_id)
     end
+
+    
   end
 end
