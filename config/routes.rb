@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   get '/dishes', to: 'dishes#index'
   get '/dishes/:id', to: 'dishes#show'
+  get '/dishes/:id/edit', to: 'dishes#edit'
+  patch '/dishes/:id', to: 'dishes#update'
 
   get '/produces', to: 'produces#index'
   get '/produces/:id', to: 'produces#show'
