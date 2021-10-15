@@ -21,27 +21,21 @@ RSpec.describe 'restaurant index' do
       expect(@restaurant2.name).to appear_before(@restaurant1.name)
     end
 
-    describe 'Create New Restaurant' do
-      it 'i see a link to create a new restaurant' do
-        save_and_open_page
-        click_link 'Create New Restaurant'
+    it 'i see a link to create a new restaurant' do
+      click_link 'Create New Restaurant'
 
-        expect(current_path).to eq('/restaurants/new')
-      end
-    #
-    #   it 'i fill in the form with restaurant attributes' do
-    #     click_link 'Create New Restaurant'
-    #     fill_in 'Name', with: 'Cabybara'
-    #     fill_in 'Dine In (true/false)', with: 'true'
-    #     fill_in 'Rating', with: '4'
-    #     click_button 'Submit'
-    #
-    #     expect(current_path).to eq('/restaurants')
-    #   end
-    #
-    #   it 'a new record is created' do
-    #     expect(Restaurant.length).to eq(4)
-    #   end
+      expect(current_path).to eq('/restaurants/new')
+    end
+
+    it 'i fill in the form with restaurant attributes and a new record is created' do
+      click_link 'Create New Restaurant'
+      fill_in 'Name', with: 'Cabybara'
+      fill_in 'Dine In (true/false)', with: 'true'
+      fill_in 'Rating', with: '4'
+      click_button 'Submit'
+
+      expect(current_path).to eq('/restaurants')
+      expect(Restaurant.count).to eq(4)
     end
   end
 end

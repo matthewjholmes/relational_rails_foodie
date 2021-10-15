@@ -9,9 +9,24 @@ class RestaurantsController < ApplicationController
   end
 
   def new
-    require "pry"; binding.pry
   end
 
   def create
+    restaurant = Restaurant.create(rest_params)
+    if restaurant.save
+      redirect_to '/restaurants'
+    else
+      redirect_to '/restaurants/new'
+    end
+  end
+
+  def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  private
+
+  def rest_params
+    params.permit(:name, :dine_in, :rating)
   end
 end
