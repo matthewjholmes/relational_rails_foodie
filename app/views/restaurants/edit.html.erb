@@ -1,11 +1,14 @@
 <h1>Edit <%= @restaurant.name %></h1>
 
-<%= form_with url: "restaurants/#{@restaurant.id}", method: patch, local: true do |f| %>
+<%= form_with url: "/restaurants/#{@restaurant.id}", method: :patch, local: true do |f| %>
   <%= f.label :name, 'Name' %>
   <%= f.text_field :name %>
 
-  <%= f.label :name, 'Name' %>
-  <%= f.text_field :name %>
+  <%= f.label :dine_in, 'Dine In (true/false)' %>
+  <%= f.text_field :dine_in %>
 
-  <%= f.label :name, 'Name' %>
-  <%= f.text_field :name %>
+  <%= f.label :rating, 'Rating' %>
+  <%= f.text_field :rating %>
+
+  <%= f.submit 'Submit' %>
+<% end %>

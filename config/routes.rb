@@ -7,11 +7,14 @@ Rails.application.routes.draw do
   post '/restaurants', to: 'restaurants#create'
   get '/restaurants/:id', to: 'restaurants#show'
   get '/restaurants/:id/edit', to: 'restaurants#edit'
+  patch '/restaurants/:id', to: 'restaurants#update'
 
   get '/farmers_markets', to: 'farmers_markets#index'
   get '/farmers_markets/new', to: 'farmers_markets#new'
   post '/farmers_markets', to: 'farmers_markets#create'
   get '/farmers_markets/:id', to: 'farmers_markets#show'
+  get '/farmers_markets/:id/edit', to: 'farmers_markets#edit'
+  patch 'farmers_markets/:id', to: 'farmers_markets#update'
 
   get 'dishes', to: 'dishes#index'
   get 'dishes/:id', to: 'dishes#show'
