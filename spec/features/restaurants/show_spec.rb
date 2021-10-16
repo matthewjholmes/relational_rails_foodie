@@ -41,5 +41,11 @@ RSpec.describe 'restaurant show page' do
       expect(current_path).to eq("/restaurants/#{@restaurant1.id}")
     end
 
+    it 'i see a link to delete restaurant' do
+      click_link "Delete #{@restaurant1.name}"
+
+      expect(current_path).to eq("/restaurants")
+      expect(page).to_not have_content(@restaurant1.name)
+    end
   end
 end

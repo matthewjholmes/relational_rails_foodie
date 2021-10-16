@@ -4,3 +4,4 @@
 <h3><%= @dish.restaurant_id %></h3>
 
 <%= link_to 'Update Dish', "/dishes/#{@dish.id}/edit" %>
+<%= link_to "Delete #{@dish.name}", "/dishes/#{@dish.id}", method: :delete %>

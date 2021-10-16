@@ -40,5 +40,12 @@ RSpec.describe 'farmers market show page' do
 
       expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}")
     end
+
+    it 'i see a link to delete farmers market' do
+      click_link "Delete #{@farmers_market1.name}"
+
+      expect(current_path).to eq("/farmers_markets")
+      expect(page).to_not have_content(@farmers_market1.name)
+    end
   end
 end

@@ -31,5 +31,12 @@ RSpec.describe 'dish show page' do
       expect(current_path).to eq("/dishes/#{@dish1.id}")
       expect(Dish.count).to eq(1)
     end
+
+    it 'i see a link to delete dish' do
+      click_link "Delete #{@dish1.name}"
+
+      expect(current_path).to eq("/dishes")
+      expect(page).to_not have_content(@dish1.name)
+    end
   end
 end

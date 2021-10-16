@@ -5,3 +5,5 @@ questions for next checkin:
 How does .permit and .require work for params?
 
 parent's children spec - sort alphabetical
+
+question- destroy
