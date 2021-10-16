@@ -24,7 +24,7 @@ class DishesController < ApplicationController
   def destroy
     dish = Dish.find(params[:id])
     dish.destroy
-    redirect_to "/dishes"
+    redirect_to '/dishes'
   end
 
   private

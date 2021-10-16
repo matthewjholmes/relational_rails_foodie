@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get '/restaurants/:restaurant_id/dishes', to: 'restaurant_dishes#index'
   get '/restaurants/:restaurant_id/dishes/new', to: 'restaurant_dishes#new'
   post '/restaurants/:restaurant_id/dishes', to: 'restaurant_dishes#create'
+  delete '/restaurants/:restaurant_id/dishes/:id', to: 'dishes#destroy'
 
   get '/farmers_markets/:farmers_market_id/produces', to: 'farmers_market_produces#index'
   get '/farmers_markets/:farmers_market_id/produces/new', to: 'farmers_market_produces#new'

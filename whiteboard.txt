@@ -4,6 +4,9 @@ questions for next checkin:
 
 How does .permit and .require work for params?
 
-parent's children spec - sort alphabetical
+destroy method (not a loop)
 
-question- destroy
+git conflicts from coverage files
+
+Return to alphabetical filter tests
+Return to user story 21: filter by number

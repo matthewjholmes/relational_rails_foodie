@@ -11,3 +11,10 @@
 
 <%= link_to 'Create New Produce', "/farmers_markets/#{@farmers_market.id}/produces/new" %>
 <%= link_to 'Sort Alphabetically', "/farmers_markets/#{@farmers_market.id}/produces?sort=alphabetical" %>
+
+<%= form_with url: "/farmers_markets/#{@farmers_market.id}/produces?quantity=filter", method: :get, local: true do |f| %>
+  <%= f.label :quantity, 'Show only produce where quantity is greater than: ' %>
+  <%= f.text_field :quantity %>
+
+  <%= f.submit 'Apply' %>
+<% end %>

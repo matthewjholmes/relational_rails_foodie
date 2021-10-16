@@ -27,7 +27,7 @@ RSpec.describe 'Farmers Market Produces Index' do
     expect(page).to have_content(@produce3.farmers_market_id)
   end
 
-  it 'i see a link to add a new dish' do
+  it 'i see a link to add a new produce' do
     click_link 'Create New Produce'
     expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/produces/new")
   end
@@ -41,5 +41,14 @@ RSpec.describe 'Farmers Market Produces Index' do
 
     expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/produces")
     expect(@farmers_market1.produces.count).to eq(4)
+  end
+
+  it 'has a form to select threshold quantity to display produce' do
+    fill_in 'Show only produce where quantity is greater than: ', with: '170'
+    click_button 'Apply'
+
+    expect(page).to_not have_content(@produce1.name)
+    expect(page).to have_content(@produce2.name)
+    expect(page).to have_content(@produce3.name)
   end
 end
