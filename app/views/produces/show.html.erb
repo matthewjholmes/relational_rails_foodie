@@ -4,3 +4,4 @@
 <h3><%= @produce.farmers_market_id %></h3>
 
 <%= link_to 'Update Produce', "/produces/#{@produce.id}/edit" %>
+<%= link_to "Delete #{@produce.name}", "/produces/#{@produce.id}", method: :delete %>

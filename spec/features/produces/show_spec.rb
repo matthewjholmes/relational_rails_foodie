@@ -32,5 +32,12 @@ RSpec.describe 'produce show page' do
       expect(current_path).to eq("/produces/#{@produce1.id}")
       expect(Produce.count).to eq(1)
     end
+
+    it 'i see a link to delete produce' do
+      click_link "Delete #{@produce1.name}"
+
+      expect(current_path).to eq("/produces")
+      expect(page).to_not have_content(@produce1.name)
+    end
   end
 end

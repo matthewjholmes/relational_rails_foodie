@@ -21,6 +21,12 @@ class ProducesController < ApplicationController
     end
   end
 
+  def destroy
+    produce = Produce.find(params[:id])
+    produce.destroy
+    redirect_to '/produces'
+  end 
+
   private
 
   def produce_params
