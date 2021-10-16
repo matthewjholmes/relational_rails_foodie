@@ -1,7 +1,7 @@
 class ProducesController < ApplicationController
 
   def index
-    @produces = Produce.all
+    @produces = Produce.seasonal_filter
   end
 
   def show
