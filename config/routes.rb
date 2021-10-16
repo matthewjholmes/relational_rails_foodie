@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/farmers_markets/:id', to: 'farmers_markets#show'
   get '/farmers_markets/:id/edit', to: 'farmers_markets#edit'
   patch '/farmers_markets/:id', to: 'farmers_markets#update'
+  delete '/farmers_markets/:id', to: 'farmers_markets#destroy'
 
   get '/dishes', to: 'dishes#index'
   get '/dishes/:id', to: 'dishes#show'
@@ -25,6 +26,9 @@ Rails.application.routes.draw do
 
   get '/produces', to: 'produces#index'
   get '/produces/:id', to: 'produces#show'
+  get '/produces/:id/edit', to: 'produces#edit'
+  patch '/produces/:id', to: 'produces#update'
+  delete '/produces/:id', to: 'produces#destroy'
 
   get '/restaurants/:restaurant_id/dishes', to: 'restaurant_dishes#index'
   get '/restaurants/:restaurant_id/dishes/new', to: 'restaurant_dishes#new'

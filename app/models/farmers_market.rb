@@ -12,5 +12,9 @@ class FarmersMarket < ApplicationRecord
 
   def quantity_filter(quantity)
     produces.where("quantity > #{quantity}")
+
+  def alphabetical_produces
+    produces.order(:name)
+
   end
 end

@@ -2,7 +2,11 @@ class RestaurantDishesController < ApplicationController
 
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
-    @dishes = @restaurant.dishes
+    if params[:sort] == 'alphabetical'
+      @dishes = @restaurant.alphabetical_dishes
+    else
+      @dishes = @restaurant.dishes
+    end
   end
 
   def new

@@ -5,3 +5,4 @@
 <p>Dishes offered: <%= @restaurant.dishes_count %></p>
 <%= link_to 'Dishes', "/restaurants/#{@restaurant.id}/dishes" %>
 <%= link_to 'Update Restaurant', "/restaurants/#{@restaurant.id}/edit" %>
+<%= link_to "Delete #{@restaurant.name}", "/restaurants/#{@restaurant.id}", method: :delete %>

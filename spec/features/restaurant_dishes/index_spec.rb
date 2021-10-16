@@ -4,9 +4,9 @@ RSpec.describe 'Restaurant Dishes Index' do
   describe 'when i visit a Restaurant Dishes Index page' do
     before do
       @restaurant1 = Restaurant.create(name: "Jameson's", dine_in: true, rating: 5)
-      @dish1 = Dish.create(name: 'Soup', seasonal: true, calories: 450, restaurant_id: @restaurant1.id)
-      @dish2 = Dish.create(name: 'Salad', seasonal: true, calories: 300, restaurant_id: @restaurant1.id)
-      @dish3 = Dish.create(name: 'Sandwich', seasonal: true, calories: 950, restaurant_id: @restaurant1.id)
+      @dish1 = Dish.create(name: 'b', seasonal: true, calories: 450, restaurant_id: @restaurant1.id)
+      @dish2 = Dish.create(name: 'a', seasonal: true, calories: 300, restaurant_id: @restaurant1.id)
+      @dish3 = Dish.create(name: 'c', seasonal: true, calories: 950, restaurant_id: @restaurant1.id)
 
       visit "/restaurants/#{@restaurant1.id}/dishes"
     end
@@ -47,6 +47,15 @@ RSpec.describe 'Restaurant Dishes Index' do
     it 'i see a link to update each dish' do
       click_link "Edit #{@dish1.name}"
       expect(current_path).to eq("/dishes/#{@dish1.id}/edit")
+
+    xit 'i see a link to sort dishes in alphabetical order' do
+      click_link 'Sort Alphabetically'
+
+
+      # expect(current_path).to eq("/restaurants/#{@restaurant1.id}/dishes")
+      visit "/restaurants/#{@restaurant1.id}/dishes?sort=alphabetical"
+      expect(@dish2.name).to appear_before(@dish1)
+      expect(@dish1.name).to appear_before(@dish3)
     end
 
     it 'i see a link next to every dish to delete it' do

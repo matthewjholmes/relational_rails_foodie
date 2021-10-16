@@ -1,7 +1,7 @@
 class DishesController < ApplicationController
 
   def index
-    @dishes = Dish.all
+    @dishes = Dish.seasonal_filter
   end
 
   def show

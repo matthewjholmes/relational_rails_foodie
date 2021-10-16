@@ -1,9 +1,8 @@
 class FarmersMarketProducesController < ApplicationController
   def index
     @farmers_market = FarmersMarket.find(params[:farmers_market_id])
-    if params[:quantity]
-      require "pry"; binding.pry
-      @produces = @farmers_market.quantity_filter(params[:length])
+    if params[:sort] == 'alphabetical'
+      @produces = @farmers_market.alphabetical_produces
     else
       @produces = @farmers_market.produces
     end
