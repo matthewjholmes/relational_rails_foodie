@@ -9,4 +9,8 @@ class FarmersMarket < ApplicationRecord
   def produce_count
     produces.length
   end
+
+  def alphabetical_produces
+    produces.order(:name)
+  end
 end

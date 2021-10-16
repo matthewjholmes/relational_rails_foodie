@@ -2,3 +2,5 @@
 <h3><%= @produce.seasonal %></h3>
 <h3><%= @produce.quantity %></h3>
 <h3><%= @produce.farmers_market_id %></h3>
+
+<%= link_to 'Update Produce', "/produces/#{@produce.id}/edit" %>
