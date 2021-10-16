@@ -44,6 +44,9 @@ RSpec.describe 'Restaurant Dishes Index' do
       expect(@restaurant1.dishes.count).to eq(4)
     end
 
+    it 'i see a link to update each dish' do
+      click_link "Edit #{@dish1.name}"
+      expect(current_path).to eq("/dishes/#{@dish1.id}/edit")
 
     xit 'i see a link to sort dishes in alphabetical order' do
       click_link 'Sort Alphabetically'
