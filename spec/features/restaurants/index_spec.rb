@@ -37,5 +37,10 @@ RSpec.describe 'restaurant index' do
       expect(current_path).to eq('/restaurants')
       expect(Restaurant.count).to eq(4)
     end
+
+    it 'i see a link to edit the restaurant' do
+      click_link "Edit #{@restaurant1.name}"
+      expect(current_path).to eq("/restaurants/#{@restaurant1.id}/edit")
+    end
   end
 end

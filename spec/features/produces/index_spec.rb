@@ -32,4 +32,6 @@ RSpec.describe 'Produce Index' do
     expect(page).to have_content(@produce3.name)
     expect(page).to_not have_content(@produce2.name)
   end
+
+  
 end
