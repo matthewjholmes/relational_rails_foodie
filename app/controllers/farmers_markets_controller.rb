@@ -33,6 +33,12 @@ class FarmersMarketsController < ApplicationController
     end
   end
 
+  def destroy
+    fm = FarmersMarket.find(params[:id])
+    fm.destroy
+    redirect_to "/farmers_markets"
+  end
+
   private
 
   def fm_params
