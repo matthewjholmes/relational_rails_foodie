@@ -250,22 +250,25 @@
           1,
           1,
           1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           null,
           1,
           1,
           1,
           1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           1,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -282,19 +285,13 @@
           null
         ]
       },
-      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/farmers_market.rb": {
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/restaurant.rb": {
         "lines": [
-          null,
           1,
           1,
           null,
           1,
-          null,
           1,
-          null,
-          1,
-          0,
-          null,
           null,
           1,
           0,
@@ -313,7 +310,7 @@
           null
         ]
       },
-      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/produce.rb": {
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/models/dish.rb": {
         "lines": [
           1,
           1,
@@ -324,17 +321,13 @@
           null
         ]
       },
-      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/farmers_market_produces_controller.rb": {
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/restaurant_dishes_controller.rb": {
         "lines": [
           1,
+          null,
           1,
-          5,
-          5,
-          0,
-          0,
-          null,
-          5,
-          null,
+          6,
+          6,
           null,
           null,
           1,
@@ -364,8 +357,47 @@
           1,
           null
         ]
+      },
+      "/Users/matthewholmes/turing/mod_2/projects/relational_rails_foodie/app/controllers/dishes_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1634419163
+    "timestamp": 1634420511
   }
 }

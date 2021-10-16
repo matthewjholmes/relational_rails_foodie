@@ -3,6 +3,7 @@
 <% @restaurants.each do |restaurant| %>
   <%= restaurant.name %>
   <%= link_to "Edit #{restaurant.name}", "/restaurants/#{restaurant.id}/edit" %><br>
+  <%= link_to "Delete #{restaurant.name}", "/restaurants/#{restaurant.id}", method: :delete %><br>
 <% end %>
 
 <%= link_to 'Create New Restaurant', '/restaurants/new' %>

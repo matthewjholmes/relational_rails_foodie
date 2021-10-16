@@ -7,5 +7,6 @@
    <%= dish.calories %>
    <%= dish.restaurant_id %>
    <%= link_to "Edit #{dish.name}", "/dishes/#{dish.id}/edit" %>
+   <%= link_to "Delete #{dish.name}", "/dishes/#{dish.id}", method: :delete %>
   </div>
 <% end %>

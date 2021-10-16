@@ -12,30 +12,39 @@ RSpec.describe 'Dishes Index' do
   end
 
   it 'i see each dish in the system with attributes' do
-    # within "dish-#{@dish1.id}" do
+    within "#dish-#{@dish1.id}" do
       expect(page).to have_content(@dish1.name)
       expect(page).to have_content(@dish1.seasonal)
       expect(page).to have_content(@dish1.calories)
       expect(page).to have_content(@dish1.restaurant_id)
-    # end
+    end
 
-    # within "dish-#{@dish2.id}" do
+    within "#dish-#{@dish2.id}" do
       expect(page).to have_content(@dish2.name)
       expect(page).to have_content(@dish2.seasonal)
       expect(page).to have_content(@dish2.calories)
       expect(page).to have_content(@dish2.restaurant_id)
-    # end
+    end
 
-    # within "dish-#{@dish3.id}" do
+    within "#dish-#{@dish3.id}" do
       expect(page).to have_content(@dish3.name)
       expect(page).to have_content(@dish3.seasonal)
       expect(page).to have_content(@dish3.calories)
       expect(page).to have_content(@dish3.restaurant_id)
-    # end
+    end
   end
 
   it 'i see a link to update each dish' do
     click_link "Edit #{@dish1.name}"
     expect(current_path).to eq("/dishes/#{@dish1.id}/edit")
+  end
+
+  it 'i see a link next to every dish to delete it' do
+    click_link "Delete #{@dish1.name}"
+
+    expect(current_path).to eq('/dishes')
+    expect(page).to_not have_content(@dish1.name)
+    expect(page).to have_content(@dish2.name)
+    expect(page).to have_content(@dish3.name)
   end
 end
