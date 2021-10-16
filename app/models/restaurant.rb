@@ -7,4 +7,8 @@ class Restaurant < ApplicationRecord
   def dishes_count
     dishes.length
   end
+
+  def alphabetical_dishes
+    dishes.order(:name)
+  end
 end
