@@ -1,7 +1,11 @@
 class FarmersMarketProducesController < ApplicationController
   def index
     @farmers_market = FarmersMarket.find(params[:farmers_market_id])
-    @produces = @farmers_market.produces
+    if params[:sort] == 'alphabetical'
+      @produces = @farmers_market.alphabetical_produces
+    else
+      @produces = @farmers_market.produces
+    end
   end
 
   def new

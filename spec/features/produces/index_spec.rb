@@ -12,25 +12,24 @@ RSpec.describe 'Produce Index' do
   end
 
   it 'i see each produce in the system with attributes' do
-    # within "produce-#{@produce1.id}" do
+    within "#produce-#{@produce1.id}" do
       expect(page).to have_content(@produce1.name)
       expect(page).to have_content(@produce1.seasonal)
       expect(page).to have_content(@produce1.quantity)
       expect(page).to have_content(@produce1.farmers_market_id)
-    # end
+    end
 
-    # within "produce-#{@produce2.id}" do
-      expect(page).to have_content(@produce2.name)
-      expect(page).to have_content(@produce2.seasonal)
-      expect(page).to have_content(@produce2.quantity)
-      expect(page).to have_content(@produce2.farmers_market_id)
-    # end
-
-    # within "produce-#{@produce3.id}" do
+    within "#produce-#{@produce3.id}" do
       expect(page).to have_content(@produce3.name)
       expect(page).to have_content(@produce3.seasonal)
       expect(page).to have_content(@produce3.quantity)
       expect(page).to have_content(@produce3.farmers_market_id)
-    # end
+    end
+  end
+
+  it 'only shows seasonal produces(boolean = true)' do
+    expect(page).to have_content(@produce1.name)
+    expect(page).to have_content(@produce3.name)
+    expect(page).to_not have_content(@produce2.name)
   end
 end

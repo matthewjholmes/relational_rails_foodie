@@ -2,3 +2,5 @@
 <h3><%= @dish.seasonal %></h3>
 <h3><%= @dish.calories %></h3>
 <h3><%= @dish.restaurant_id %></h3>
+
+<%= link_to 'Update Dish', "/dishes/#{@dish.id}/edit" %>
