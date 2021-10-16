@@ -38,5 +38,10 @@ RSpec.describe 'farmers_market index' do
       expect(current_path).to eq('/farmers_markets')
       expect(FarmersMarket.count).to eq(4)
     end
+
+    it 'i see a link to edit the market' do
+      click_link "Edit #{@farmers_market1.name}"
+      expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/edit")
+    end
   end
 end

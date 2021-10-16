@@ -2,6 +2,7 @@
 
 <% @farmers_markets.each do |farmers_market| %>
   <%= farmers_market.name %>
+  <%= link_to "Edit #{farmers_market.name}", "/farmers_markets/#{farmers_market.id}/edit" %>
 <% end %>
 
 <%= link_to 'Create New Farmers Market', '/farmers_markets/new' %>
