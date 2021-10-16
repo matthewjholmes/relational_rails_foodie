@@ -32,4 +32,9 @@ RSpec.describe 'Dishes Index' do
     expect(page).to have_content(@dish2.name)
     expect(page).to_not have_content(@dish3.name)
   end
+
+  it 'i see a link to update each dish' do
+    click_link "Edit #{@dish1.name}"
+    expect(current_path).to eq("/dishes/#{@dish1.id}/edit")
+  end
 end
