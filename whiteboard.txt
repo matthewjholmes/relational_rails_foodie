@@ -3,3 +3,9 @@ questions for next checkin:
 #how can we use 'validates_presence_of' with our boolean
 
 How does .permit and .require work for params?
+
+destroy method (not a loop)
+
+git conflicts from coverage files
+
+Return to user story 21: filter by number

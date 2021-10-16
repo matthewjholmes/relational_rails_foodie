@@ -9,4 +9,8 @@ class FarmersMarket < ApplicationRecord
   def produce_count
     produces.length
   end
+
+  def quantity_filter(quantity)
+    produces.where("quantity > #{quantity}")
+  end
 end

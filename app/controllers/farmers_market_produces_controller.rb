@@ -1,7 +1,12 @@
 class FarmersMarketProducesController < ApplicationController
   def index
     @farmers_market = FarmersMarket.find(params[:farmers_market_id])
-    @produces = @farmers_market.produces
+    if params[:quantity]
+      require "pry"; binding.pry
+      @produces = @farmers_market.quantity_filter(params[:length])
+    else
+      @produces = @farmers_market.produces
+    end
   end
 
   def new
