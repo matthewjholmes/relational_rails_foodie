@@ -44,7 +44,7 @@ RSpec.describe 'Farmers Market Produces Index' do
   end
 
   it 'has a form to select threshold quantity to display produce' do
-    fill_in 'Show only produce where quantity is greater than: ', with: '170'
+    fill_in :quantity, with: '170'
     click_button 'Apply'
 
     expect(page).to_not have_content(@produce1.name)

@@ -2,7 +2,8 @@ class RestaurantDishesController < ApplicationController
 
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
-    if params[:sort] == 'alphabetical'
+    if params[:sort]
+      # require "pry"; binding.pry
       @dishes = @restaurant.alphabetical_dishes
     else
       @dishes = @restaurant.dishes

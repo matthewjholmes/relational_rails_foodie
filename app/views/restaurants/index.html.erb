@@ -1,9 +1,14 @@
-<h1>Restaurants</h1>
+<div class="container">
 
-<% @restaurants.each do |restaurant| %>
-  <%= restaurant.name %>
-  <%= link_to "Edit #{restaurant.name}", "/restaurants/#{restaurant.id}/edit" %><br>
-  <%= link_to "Delete #{restaurant.name}", "/restaurants/#{restaurant.id}", method: :delete %><br>
-<% end %>
+  <h1>Restaurants</h1>
 
-<%= link_to 'Create New Restaurant', '/restaurants/new' %>
+  <% @restaurants.each do |restaurant| %>
+  <table class="table">
+    <%= restaurant.name %>
+    <%= link_to "Edit #{restaurant.name}", "/restaurants/#{restaurant.id}/edit" %><br>
+    <%= link_to "Delete #{restaurant.name}", "/restaurants/#{restaurant.id}", method: :delete %><br>
+  </table>
+  <% end %>
+
+  <%= link_to 'Create New Restaurant', '/restaurants/new' %>
+</div>

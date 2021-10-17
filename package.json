@@ -1,5 +1,10 @@
 {
   "name": "relational_rails_foodie",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "4.3.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^4.3.1"
+  }
 }

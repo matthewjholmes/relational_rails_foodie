@@ -49,20 +49,16 @@ RSpec.describe 'Restaurant Dishes Index' do
       expect(current_path).to eq("/dishes/#{@dish1.id}/edit")
     end
 
-    xit 'i see a link to sort dishes in alphabetical order' do
+    it 'i see a link to sort dishes in alphabetical order' do
       click_link 'Sort Alphabetically'
 
-
-      # expect(current_path).to eq("/restaurants/#{@restaurant1.id}/dishes")
-      visit "/restaurants/#{@restaurant1.id}/dishes?sort=alphabetical"
-      expect(@dish2.name).to appear_before(@dish1)
-      expect(@dish1.name).to appear_before(@dish3)
+      expect(@dish2.name).to appear_before(@dish1.name, only_text: true)
+      expect(@dish1.name).to appear_before(@dish3.name, only_text: true)
     end
 
     it 'i see a link next to every dish to delete it' do
       click_link "Delete #{@dish1.name}"
 
-      expect(current_path).to eq('/dishes')
       expect(page).to_not have_content(@dish1.name)
       expect(page).to have_content(@dish2.name)
       expect(page).to have_content(@dish3.name)
