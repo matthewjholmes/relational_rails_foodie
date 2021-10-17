@@ -44,6 +44,5 @@ RSpec.describe 'Dishes Index' do
     expect(current_path).to eq('/dishes')
     expect(page).to_not have_content(@dish1.name)
     expect(page).to have_content(@dish2.name)
-    expect(page).to have_content(@dish3.name)
   end
 end
