@@ -13,7 +13,7 @@
     <% @restaurants.each do |restaurant| %>
       <tr>
         <div id="restaurant-<%= restaurant.id %>">
-          <td><h5><%= restaurant.name %></h5></td>
+          <td><h5><%= link_to restaurant.name, "/restaurants/#{restaurant.id}" %></h5></td>
           <td><%= link_to "Edit", "/restaurants/#{restaurant.id}/edit", class: 'btn btn-info' %></td>
           <td><%= link_to "Delete", "/restaurants/#{restaurant.id}", method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %></td>
         </div>

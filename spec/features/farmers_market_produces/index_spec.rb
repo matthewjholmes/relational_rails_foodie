@@ -32,6 +32,13 @@ RSpec.describe 'Farmers Market Produces Index' do
     expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/produces/new")
   end
 
+  it 'i see a link to sort alphabetically' do
+    click_link 'Sort Alphabetically'
+    expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/produces")
+    expect(@produce2.name).to appear_before(@produce1.name)
+    expect(@produce1.name).to appear_before(@produce3.name)
+  end
+
   it 'i fill out the form and a new produce is created, and redirect to farmers_market produce index' do
     click_link 'Create New Produce'
     fill_in 'Name', with: 'Potatoes'

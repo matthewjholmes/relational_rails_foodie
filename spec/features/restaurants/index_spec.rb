@@ -39,7 +39,6 @@ RSpec.describe 'restaurant index' do
     end
 
     it 'i see a link to edit the restaurant' do
-      save_and_open_page
       within "#restaurant-#{@restaurant1.id}" do
         click_link "Edit"
         expect(current_path).to eq("/restaurants/#{@restaurant1.id}/edit")

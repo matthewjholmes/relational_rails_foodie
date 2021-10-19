@@ -40,8 +40,21 @@ RSpec.describe 'farmers_market index' do
     end
 
     it 'i see a link to edit the market' do
-      click_link "Edit #{@farmers_market1.name}"
-      expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/edit")
+      within "#farmers-market-#{@farmers_market1.id}" do
+        click_link "Edit"
+        expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/edit")
+      end
+    end
+
+    it 'i see a link next to every farmers market to delete it' do
+      within "#farmers-market-#{@farmers_market1.id}" do
+        click_link "Delete"
+
+        expect(current_path).to eq('/farmers_markets')
+      end
+      expect(page).to_not have_content(@farmers_market1.name)
+      expect(page).to have_content(@farmers_market2.name)
+      expect(page).to have_content(@farmers_market3.name)
     end
   end
 end

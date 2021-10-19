@@ -1,9 +1,0 @@
-questions for next checkin:
-
-How should we use 'validates_presence_of' with our boolean, if at all?
-
-How does .permit and .require work for params?
-
-destroy method (not a loop) (Is it AR versus action?)
-
-git conflicts from coverage files

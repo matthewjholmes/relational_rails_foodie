@@ -1,8 +1,26 @@
-<h1>Farmers Markets</h1>
+<br>
+<h3>Farmers Markets</h3>
 
-<% @farmers_markets.each do |farmers_market| %>
-  <%= farmers_market.name %>
-  <%= link_to "Edit #{farmers_market.name}", "/farmers_markets/#{farmers_market.id}/edit" %>
-<% end %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><h4>Name</h4></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
 
-<%= link_to 'Create New Farmers Market', '/farmers_markets/new' %>
+  <tbody>
+    <% @farmers_markets.each do |farmers_market| %>
+      <tr>
+        <div id="farmers-market-<%= farmers_market.id %>">
+          <td><h5><%= link_to farmers_market.name, "farmers_markets/#{farmers_market.id}" %></h5></td>
+          <td><%= link_to "Edit", "/farmers_markets/#{farmers_market.id}/edit", class: 'btn btn-info'%></td>
+          <td><%= link_to "Delete", "/farmers_markets/#{farmers_market.id}", method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %></td>
+      </div>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'Create New Farmers Market', '/farmers_markets/new', class: 'btn btn-success' %>
