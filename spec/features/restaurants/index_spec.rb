@@ -39,14 +39,19 @@ RSpec.describe 'restaurant index' do
     end
 
     it 'i see a link to edit the restaurant' do
-      click_link "Edit #{@restaurant1.name}"
-      expect(current_path).to eq("/restaurants/#{@restaurant1.id}/edit")
+      save_and_open_page
+      within "#restaurant-#{@restaurant1.id}" do
+        click_link "Edit"
+        expect(current_path).to eq("/restaurants/#{@restaurant1.id}/edit")
+      end
     end
 
     it 'i see a link next to every restaurant to delete it' do
-      click_link "Delete #{@restaurant1.name}"
+      within "#restaurant-#{@restaurant1.id}" do
+        click_link "Delete"
 
-      expect(current_path).to eq('/restaurants')
+        expect(current_path).to eq('/restaurants')
+      end
       expect(page).to_not have_content(@restaurant1.name)
       expect(page).to have_content(@restaurant2.name)
       expect(page).to have_content(@restaurant3.name)
