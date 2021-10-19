@@ -6,7 +6,7 @@ RSpec.describe 'welcome index page' do
   end
 
   it 'has project title' do
-    expect(page).to have_content("Foodie, a Relational Rails Exploration")
+    expect(page).to have_content("Foodie, A Relational Rails Exploration")
   end
 
   it 'has link to restaurants' do

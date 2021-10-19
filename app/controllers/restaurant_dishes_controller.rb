@@ -2,8 +2,10 @@ class RestaurantDishesController < ApplicationController
 
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
-    if params[:sort] == 'alphabetical'
+    if params[:sort]
       @dishes = @restaurant.alphabetical_dishes
+    elsif params[:calories]
+      @dishes = @restaurant.calories_filter(params[:calories])
     else
       @dishes = @restaurant.dishes
     end

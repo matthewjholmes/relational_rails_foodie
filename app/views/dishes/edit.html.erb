@@ -1,14 +1,14 @@
-<h1>Edit <%= @dish.name %></h1>
+<h1>Edit <%= @dish.name %></h1> <br><br>
 
 <%= form_with url: "/dishes/#{@dish.id}", method: :patch, local: true do |f| %>
   <%= f.label :name, "Name" %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name %> <br><br>
 
   <%= f.label :seasonal, "Seasonal (true/false)" %>
-  <%= f.text_field :seasonal %>
+  <%= f.text_field :seasonal %> <br><br>
 
   <%= f.label :calories, "Calories" %>
-  <%= f.text_field :calories %>
+  <%= f.text_field :calories %> <br><br>
 
-  <%= f.submit 'Update Dish' %>
+  <%= f.submit 'Update Dish', class: 'btn btn-success' %>
 <% end %>

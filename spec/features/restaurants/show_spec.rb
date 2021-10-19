@@ -22,8 +22,10 @@ RSpec.describe 'restaurant show page' do
     end
 
     it 'i see a link to restaurant dishes' do
-      click_link 'Dishes'
-      expect(current_path).to eq("/restaurants/#{@restaurant1.id}/dishes")
+      within "#links" do
+        click_link 'Dishes'
+        expect(current_path).to eq("/restaurants/#{@restaurant1.id}/dishes")
+      end
     end
 
     it 'i see a link to update restaurant' do

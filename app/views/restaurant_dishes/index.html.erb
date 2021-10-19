@@ -2,15 +2,21 @@
 
 <% @dishes.each do |dish| %>
   <div id="dish-<%= dish.id %>">
-   <%= dish.name %>
-   <%= dish.seasonal %>
-   <%= dish.calories %>
-   <%= dish.restaurant_id %>
+   Name: <%= dish.name %> <br>
+   <%= dish.seasonal %> <br>
+   Amount of Calories: <%= dish.calories %> <br>
+   <%= dish.restaurant_id %> <br>
    <%= link_to "Edit #{dish.name}", "/dishes/#{dish.id}/edit" %>
    <%= link_to "Delete #{dish.name}", "/dishes/#{dish.id}", method: :delete %>
   </div>
 <% end %>
 
 <%= link_to 'Create New Dish', "/restaurants/#{@restaurant.id}/dishes/new" %>
-<%= link_to 'Sort Alphabetically', "/restaurants/#{@restaurant.id}/dishes?sort=alphabetical" %>
+<%= link_to 'Sort Alphabetically', "/restaurants/#{@restaurant.id}/dishes?sort=asc"  %>
 
+<%= form_with url: "/restaurants/#{@restaurant.id}/dishes", method: :get, local: true do |f| %>
+  <%= f.label :calories, 'Show only dishes where calories are greater than: ' %>
+  <%= f.text_field :calories %>
+
+  <%= f.submit 'Apply' %>
+<% end %>

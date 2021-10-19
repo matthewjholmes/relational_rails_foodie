@@ -22,13 +22,17 @@ RSpec.describe 'farmers market show page' do
     end
 
     it 'i see a link to the markets produce' do
-      click_link 'Produce'
-      expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/produces")
+      within "#links" do
+        click_link 'Produce'
+        expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/produces")
+      end
     end
 
     it 'i see a link to update farmers_market' do
-      click_link 'Update Farmers Market'
-      expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/edit")
+      within "#links" do
+        click_link 'Update Farmers Market'
+        expect(current_path).to eq("/farmers_markets/#{@farmers_market1.id}/edit")
+      end
     end
 
     it 'i fill out form with updates and am redirected to the updated show page' do
