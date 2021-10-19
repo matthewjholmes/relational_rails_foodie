@@ -3,6 +3,11 @@
 <h3><%= @restaurant.rating %></h3>
 
 <p>Dishes offered: <%= @restaurant.dishes_count %></p>
+
+<div id="links">
+
 <%= link_to 'Dishes', "/restaurants/#{@restaurant.id}/dishes" %>
 <%= link_to 'Update Restaurant', "/restaurants/#{@restaurant.id}/edit" %>
 <%= link_to "Delete #{@restaurant.name}", "/restaurants/#{@restaurant.id}", method: :delete %>
+
+</div>

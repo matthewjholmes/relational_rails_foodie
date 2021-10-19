@@ -4,7 +4,10 @@
 
 <p>Produce variety: <%= @farmers_market.produce_count %></p>
 
+<div id="links">
+
 <%= link_to 'Produce', "/farmers_markets/#{@farmers_market.id}/produces" %>
 
 <%= link_to 'Update Farmers Market', "/farmers_markets/#{@farmers_market.id}/edit" %>
 <%= link_to "Delete #{@farmers_market.name}", "/farmers_markets/#{@farmers_market.id}", method: :delete %>
+</div>
