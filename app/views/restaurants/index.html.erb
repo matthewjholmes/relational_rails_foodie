@@ -1,14 +1,25 @@
-<div class="container">
+<br>
+<h3>Restaurants</h3>
 
-  <h1>Restaurants</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><h4>Name</h4></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
 
-  <% @restaurants.each do |restaurant| %>
-  <table class="table">
-    <%= restaurant.name %>
-    <%= link_to "Edit #{restaurant.name}", "/restaurants/#{restaurant.id}/edit" %><br>
-    <%= link_to "Delete #{restaurant.name}", "/restaurants/#{restaurant.id}", method: :delete %><br>
-  </table>
-  <% end %>
-
-  <%= link_to 'Create New Restaurant', '/restaurants/new' %>
-</div>
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <tr>
+        <div id="restaurant-<%= restaurant.id %>">
+          <td><h5><%= restaurant.name %></h5></td>
+          <td><%= link_to "Edit", "/restaurants/#{restaurant.id}/edit", class: 'btn btn-info' %></td>
+          <td><%= link_to "Delete", "/restaurants/#{restaurant.id}", method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %></td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'Create New Restaurant', '/restaurants/new', class: 'btn btn-success' %>
