@@ -1,10 +1,30 @@
-<h1>Produce</h1>
+<br>
+<h3>Produce</h3>
 
-<% @produces.each do |produce| %>
-  <div id="produce-<%= produce.id %>">
-   <%= produce.name %>
-   <%= produce.seasonal %>
-   <%= produce.quantity %>
-   <%= produce.farmers_market_id %>
-  </div>
-<% end %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><h4>Name</h4></th>
+      <th><h5>Seasonal</h5></th>
+      <th><h5>Quantity</h5></th>
+      <th><h5>Market ID</h5></th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @produces.each do |produce| %>
+      <tr>
+        <div id="produce-<%= produce.id %>">
+           <td><h5><%= link_to produce.name, "/produces/#{produce.id}" %></h5></td>
+           <td><%= produce.seasonal %></td>
+           <td><%= produce.quantity %></td>
+           <td><%= produce.farmers_market_id %></td>
+           <td><%= link_to "Edit", "/produces/#{produce.id}/edit", class: 'btn btn-info' %></td>
+           <td><%= link_to "Delete", "/produces/#{produce.id}", method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %></td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

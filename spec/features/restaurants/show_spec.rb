@@ -33,16 +33,6 @@ RSpec.describe 'restaurant show page' do
       expect(current_path).to eq("/restaurants/#{@restaurant1.id}/edit")
     end
 
-    it 'i fill out form with updates and am redirected to the updated show page' do
-      click_link 'Update Restaurant'
-      fill_in 'Name', with: 'Cabybara'
-      fill_in 'Dine In (true/false)', with: 'true'
-      fill_in 'Rating', with: '4'
-      click_button 'Submit'
-
-      expect(current_path).to eq("/restaurants/#{@restaurant1.id}")
-    end
-
     it 'i see a link to delete restaurant' do
       click_link "Delete #{@restaurant1.name}"
 

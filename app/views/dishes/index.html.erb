@@ -1,12 +1,29 @@
-<h1>Dishes</h1>
+<br>
+<h3>Dishes</h3>
 
-<% @dishes.each do |dish| %>
-  <div id="dish-<%= dish.id %>">
-   <%= dish.name %>
-   <%= dish.seasonal %>
-   <%= dish.calories %>
-   <%= dish.restaurant_id %>
-   <%= link_to "Edit #{dish.name}", "/dishes/#{dish.id}/edit" %>
-   <%= link_to "Delete #{dish.name}", "/dishes/#{dish.id}", method: :delete %>
-  </div>
-<% end %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><h4>Name</h4></th>
+      <th><h5>Seasonal</h5></th>
+      <th><h5>Calories</h5></th>
+      <th><h5>Restaurant ID</h5></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dishes.each do |dish| %>
+      <tr>
+        <div id="dish-<%= dish.id %>">
+          <td><h5><%= link_to dish.name, "/dishes/#{dish.id}" %></h5></td>
+          <td><%= dish.seasonal %></td>
+          <td><%= dish.calories %></td>
+          <td><%= dish.restaurant_id %></td>
+          <td><%= link_to "Edit", "/dishes/#{dish.id}/edit", class: 'btn btn-info' %></td>
+          <td><%= link_to "Delete", "/dishes/#{dish.id}", method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %></td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

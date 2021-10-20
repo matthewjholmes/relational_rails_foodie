@@ -21,17 +21,6 @@ RSpec.describe 'dish show page' do
       expect(current_path).to eq("/dishes/#{@dish1.id}/edit")
     end
 
-    it 'i fill in form and am redirected to updated show page' do
-      click_link 'Update Dish'
-      fill_in 'Name', with: 'Tomato Soup'
-      fill_in 'Seasonal (true/false)', with: 'false'
-      fill_in 'Calories', with: '450'
-      click_button 'Update Dish'
-
-      expect(current_path).to eq("/dishes/#{@dish1.id}")
-      expect(Dish.count).to eq(1)
-    end
-
     it 'i see a link to delete dish' do
       click_link "Delete #{@dish1.name}"
 

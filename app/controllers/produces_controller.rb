@@ -17,7 +17,7 @@ class ProducesController < ApplicationController
     if produce.update(produce_params)
       redirect_to "/produces/#{produce.id}"
     else
-      redirect_to "/produces/#{produces.id}/edit"
+      redirect_to "/produces/#{produce.id}/edit"
     end
   end
 
@@ -25,7 +25,7 @@ class ProducesController < ApplicationController
     produce = Produce.find(params[:id])
     produce.destroy
     redirect_to '/produces'
-  end 
+  end
 
   private
 
