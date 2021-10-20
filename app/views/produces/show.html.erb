@@ -1,7 +1,7 @@
 <h1><%= @produce.name %></h1>
-<h3><%= @produce.seasonal %></h3>
-<h3><%= @produce.quantity %></h3>
-<h3><%= @produce.farmers_market_id %></h3>
+<h3>Seasonal: <%= @produce.seasonal %></h3>
+<h3>Quantity: <%= @produce.quantity %></h3>
+<h3>Farmers Market ID: <%= @produce.farmers_market_id %></h3>
 
 <%= link_to 'Update Produce', "/produces/#{@produce.id}/edit" %>
 <%= link_to "Delete #{@produce.name}", "/produces/#{@produce.id}", method: :delete %>
