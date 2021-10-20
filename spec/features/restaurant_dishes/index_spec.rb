@@ -33,17 +33,6 @@ RSpec.describe 'Restaurant Dishes Index' do
       expect(current_path).to eq("/restaurants/#{@restaurant1.id}/dishes/new")
     end
 
-    it 'i fill out the form and a new dish is created, and redirect to restuarant dishes index' do
-      click_link 'Create New Dish'
-      fill_in 'Name', with: 'Burrito'
-      fill_in 'Seasonal (true/false)', with: 'false'
-      fill_in 'Calories', with: '1200'
-      click_button 'Create New Dish'
-
-      expect(current_path).to eq("/restaurants/#{@restaurant1.id}/dishes")
-      expect(@restaurant1.dishes.count).to eq(4)
-    end
-
     it 'i see a link to update each dish' do
       click_link "Edit #{@dish1.name}"
       expect(current_path).to eq("/dishes/#{@dish1.id}/edit")

@@ -28,17 +28,6 @@ RSpec.describe 'farmers_market index' do
       expect(current_path).to eq('/farmers_markets/new')
     end
 
-    it 'i fill in the form with farmers market attributes and a new record is created' do
-      click_link 'Create New Farmers Market'
-      fill_in 'Name', with: 'Local Market'
-      fill_in 'Local', with: 'true'
-      fill_in 'Vendor Count', with: '20'
-      click_button 'Submit'
-
-      expect(current_path).to eq('/farmers_markets')
-      expect(FarmersMarket.count).to eq(4)
-    end
-
     it 'i see a link to edit the market' do
       within "#farmers-market-#{@farmers_market1.id}" do
         click_link "Edit"
