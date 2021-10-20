@@ -1,7 +1,7 @@
 <h1><%= @dish.name %></h1>
-<h3><%= @dish.seasonal %></h3>
-<h3><%= @dish.calories %></h3>
-<h3><%= @dish.restaurant_id %></h3>
+<h3>Seasonal: <%= @dish.seasonal %></h3>
+<h3>Calories: <%= @dish.calories %></h3>
+<h3>Restaurant ID: <%= @dish.restaurant_id %></h3>
 
 <%= link_to 'Update Dish', "/dishes/#{@dish.id}/edit", class: 'btn btn-outline-primary' %>
 <%= link_to "Delete #{@dish.name}", "/dishes/#{@dish.id}", method: :delete %>

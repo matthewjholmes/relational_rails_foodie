@@ -5,8 +5,7 @@ class Restaurant < ApplicationRecord
   validates_presence_of :rating
 
   def dishes_count
-    #AR count aggregate?
-    dishes.length
+    dishes.count
   end
 
   def alphabetical_dishes
