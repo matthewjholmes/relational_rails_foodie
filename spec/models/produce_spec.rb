@@ -24,5 +24,9 @@ describe Produce do
     it 'can return only seasonal produce' do
       expect(Produce.seasonal_filter).to eq([@produce1, @produce3])
     end
+
+    it 'can order by most recent creation' do
+      expect(Produce.order_by_most_recent_creation).to eq([@produce3, @produce2, @produce1])
+    end
   end
 end

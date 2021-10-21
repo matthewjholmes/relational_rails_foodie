@@ -25,5 +25,9 @@ describe Dish do
       dishes = Dish.seasonal_filter
       expect(dishes).to eq([@dish1, @dish2])
     end
+
+    it 'can order by most recent creation' do
+      expect(Dish.order_by_most_recent_creation).to eq([@dish3, @dish2, @dish1])
+    end
   end
 end
